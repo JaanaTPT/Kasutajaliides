@@ -1,8 +1,156 @@
 <template>
+
 <v-app>
-  <v-card height = 1000px>
-    
-    <v-toolbar>
+  <v-card class="mx-auto">
+  <v-navigation-drawer
+      app
+      permanent
+      left
+      fixed>
+   <template>
+        <v-list-item>
+          <v-app-bar-nav-icon></v-app-bar-nav-icon>
+            <img src="https://www.pngarts.com/files/9/official-YouTube-Logo-PNG-High-Quality-Image.png" style = "max-width: 50%;">
+        </v-list-item>
+      </template>
+
+
+      <v-list dense>
+         
+        
+      
+        <v-list-item
+          v-for="item in items"
+          :key="item.title"
+          link
+        >
+          <v-list-item-icon>
+            
+            <v-icon>{{ item.icon }}</v-icon>
+            
+          </v-list-item-icon>
+
+          <v-list-item-content>
+            <v-list-item-title>{{ item.title }}</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+       
+      </v-list>
+
+           <v-divider></v-divider>
+
+      <v-list dense>
+        <v-list-item
+          v-for="item2 in items2"
+          :key="item2.title"
+          link
+        >
+          <v-list-item-icon>
+            <v-icon>{{ item2.icon }}</v-icon>
+          </v-list-item-icon>
+
+          <v-list-item-content>
+            <v-list-item-title>{{ item2.title }}</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+      </v-list>
+
+   <v-divider></v-divider>
+
+      <v-list dense>
+        <v-list-item id = "sub">
+          SUBSCRIPTIONS
+          </v-list-item>
+        <v-list-item
+          v-for="item3 in items3"
+          :key="item3.title"
+          link
+        >
+          <v-list-item-avatar>
+            <v-avatar>
+              <v-img  :src= item3.avatar style="max-height:30px; max-width:30px">
+               
+                </v-img>
+              </v-avatar>
+          </v-list-item-avatar>
+
+          <v-list-item-content>
+            <v-list-item-title>{{ item3.title }}</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+      </v-list>
+                      <v-divider></v-divider>
+
+      <v-list dense>
+         <v-list-item id = "sub">
+          MORE FROM YOUTUBE
+          </v-list-item>
+        <v-list-item
+          v-for="item4 in items4"
+          :key="item4.title"
+          link
+        >
+          <v-list-item-icon>
+            <v-icon>{{ item4.icon }}</v-icon>
+          </v-list-item-icon>
+
+          <v-list-item-content>
+            <v-list-item-title>{{ item4.title }}</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+      </v-list>
+
+       <v-divider></v-divider>
+
+      <v-list dense>
+        <v-list-item
+          v-for="item5 in items5"
+          :key="item5.title"
+          link
+        >
+          <v-list-item-icon>
+            <v-icon>{{ item5.icon }}</v-icon>
+          </v-list-item-icon>
+
+          <v-list-item-content>
+            <v-list-item-title>{{ item5.title }}</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+      </v-list>
+
+      <v-divider></v-divider>
+
+      <v-list id = "info" dense >
+        <v-list-item
+          v-for="item6 in items6"
+          :key="item6.title"
+          link
+        >
+          <v-list-item-content>
+            <v-list-item-title style="font-size:0.75rem !important; font-weight: bolder; padding-left:0; color:#aaa; line-height: 1.2rem !important;">{{ item6.title }}</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+      </v-list>
+
+      <v-list id = "info" dense >
+        <v-list-item
+          v-for="item7 in items7"
+          :key="item7.title"
+          link
+        >
+          <v-list-item-content>
+            <v-list-item-title style="font-size:0.75rem !important; font-weight: bolder; padding-left:0; color:#aaa; line-height: 1.2rem !important;">{{ item7.title }}</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+        <v-list-item id = "sub" style="color:#909090">
+          © 2021 Google LLC
+          </v-list-item>
+      </v-list>
+  </v-navigation-drawer>
+  </v-card>
+
+  <v-app-bar app>
+   <v-toolbar>
       <v-toolbar-title></v-toolbar-title>
 
       <v-spacer></v-spacer>
@@ -38,187 +186,63 @@
 
       <v-btn icon>
         <v-avatar>
-        <v-img src="https://picsum.photos/id/1074/367/267"></v-img>
+        <v-img src="https://i.picsum.photos/id/1080/6858/4574.jpg?hmac=qMYBjROs2Wu589QQXRAYsxDJu4ZuRQ4PKDpb3x_Oouw" style="max-height:30px; max-width:30px"></v-img>
         </v-avatar>
       </v-btn>
 
     </v-toolbar>
-    <br>
+  </v-app-bar>
 
-  <v-row>
-  <v-card >
-    
-    <v-tabs 
-      v-model="tab"
-      rounded
-    >
-      <v-tab 
-        v-for="item8 in items8"
-        :key="item8.tab"
-      >
-        {{ item8.tab }}
-      </v-tab>
-    </v-tabs>
+  <!-- Sizes your content based upon application components -->
+  <v-main>
 
-    <v-tabs-items v-model="tab">
-      <v-tab-item
-        v-for="item8 in items8"
-        :key="item8.tab"
-      >
-        <v-card flat>
-          <v-card-text>{{ item8.content }}</v-card-text>
-        </v-card>
-      </v-tab-item>
-    </v-tabs-items>
-  </v-card>
-  </v-row>
-  
-
-
-
-    
-
-    <v-navigation-drawer
-      absolute
-      permanent
-      left
-    >
-    
-      
-      <template>
-        <v-list-item>
-          <v-app-bar-nav-icon></v-app-bar-nav-icon>
-            <img src="https://lh3.googleusercontent.com/3zkP2SYe7yYoKKe47bsNe44yTgb4Ukh__rBbwXwgkjNRe4PykGG409ozBxzxkrubV7zHKjfxq6y9ShogWtMBMPyB3jiNps91LoNH8A=s500" style = "max-width: 50%;">
-        </v-list-item>
-      </template>
-
-
-      <v-list dense>
-        <v-list-item
-          v-for="item in items"
-          :key="item.title"
+    <!-- Provides the application the proper gutter -->
+    <v-container fluid>
+      <!-- <Nuxt /> -->
+                       <v-row dense>
+        <v-col
+          v-for="card in cards"
+          :key="card.title"
+          :cols="card.flex"
         >
-          <v-list-item-icon>
-            <v-icon>{{ item.icon }}</v-icon>
-          </v-list-item-icon>
+          <v-card>
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley">
+            <v-img
+              :src="card.src"
+              height="200px"
+            >
+            </v-img>
+            </a>
+            <v-card-text>
 
-          <v-list-item-content>
-            <v-list-item-title>{{ item.title }}</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-      </v-list>
+     <v-card-text v-text="card.title"></v-card-text>
 
-           <v-divider></v-divider>
-
-      <v-list dense>
-        <v-list-item
-          v-for="item2 in items2"
-          :key="item2.title"
-        >
-          <v-list-item-icon>
-            <v-icon>{{ item2.icon }}</v-icon>
-          </v-list-item-icon>
-
-          <v-list-item-content>
-            <v-list-item-title>{{ item2.title }}</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-      </v-list>
-
-   <v-divider></v-divider>
-
-      <v-list dense>
-        <v-list-item id = "sub">
-          SUBSCRIPTIONS
-          </v-list-item>
-        <v-list-item
-          v-for="item3 in items3"
-          :key="item3.title"
-        >
-          <v-list-item-avatar>
-            <v-avatar>
-              <v-img  :src= item3.avatar>
+      <!-- <v-avatar>
+              <v-img  :src= card.avatar>
                
                 </v-img>
-              </v-avatar>
-          </v-list-item-avatar>
+              </v-avatar> -->
+      <v-card-text v-text="card.author"></v-card-text>
 
-          <v-list-item-content>
-            <v-list-item-title>{{ item3.title }}</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-      </v-list>
-                      <v-divider></v-divider>
-
-      <v-list dense>
-         <v-list-item id = "sub">
-          MORE FROM YOUTUBE
-          </v-list-item>
-        <v-list-item
-          v-for="item4 in items4"
-          :key="item4.title"
-        >
-          <v-list-item-icon>
-            <v-icon>{{ item4.icon }}</v-icon>
-          </v-list-item-icon>
-
-          <v-list-item-content>
-            <v-list-item-title>{{ item4.title }}</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-      </v-list>
-
-       <v-divider></v-divider>
-
-      <v-list dense>
-        <v-list-item
-          v-for="item5 in items5"
-          :key="item5.title"
-        >
-          <v-list-item-icon>
-            <v-icon>{{ item5.icon }}</v-icon>
-          </v-list-item-icon>
-
-          <v-list-item-content>
-            <v-list-item-title>{{ item5.title }}</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-      </v-list>
-
-      <v-divider></v-divider>
-
-      <v-list id = "info" dense >
-        <v-list-item
-          v-for="item6 in items6"
-          :key="item6.title"
-        >
-          <v-list-item-content>
-            <v-list-item-title style="font-size:0.75rem !important; font-weight: bolder; padding-left:0; color:#aaa; line-height: 1.2rem !important;">{{ item6.title }}</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-      </v-list>
-
-      <v-list id = "info" dense >
-        <v-list-item
-          v-for="item7 in items7"
-          :key="item7.title"
-        >
-          <v-list-item-content>
-            <v-list-item-title style="font-size:0.75rem !important; font-weight: bolder; padding-left:0; color:#aaa; line-height: 1.2rem !important;">{{ item7.title }}</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-        <v-list-item id = "sub" style="color:#909090">
-          © 2021 Google LLC
-          </v-list-item>
-      </v-list>
+      <v-card-text v-text="card.viewstime"></v-card-text>
+      
 
 
-    </v-navigation-drawer>
-  </v-card>
+    </v-card-text>
 
+          </v-card>
+        </v-col>
+      </v-row>
+    </v-container>
+  </v-main>
+
+  <v-footer app>
+    <!-- -->
+  </v-footer>
 </v-app>
-</template>
 
+
+</template>
 
 <script>
   export default {
@@ -235,7 +259,7 @@
           { title: 'History', icon: 'mdi-history' },
           { title: 'Your videos', icon: 'mdi-play-box-outline' },
           { title: 'Watch later', icon: 'mdi-clock' },
-          { title: 'Goodmast', icon: 'mdi-youtube-tv' },
+          { title: 'MyMusicList', icon: 'mdi-youtube-tv' },
           { title: 'Show more', icon: 'mdi-check' },
         ],
         items3: [
@@ -280,6 +304,22 @@
           { tab: 'Tab X Content', content: 'Tab X Content' },
           { tab: 'Tab X Content', content: 'Tab X Content' },
         ],
+        cards: [
+        { title: 'Rick Astley - Never Gonna Give You Up', src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZPJD9RKB1nYJ7ME9tOoSz0wX7WvX9Xi_BXQ&usqp=CAU', author: 'Rick Astley', avatar: 'https://yt3.ggpht.com/Si7ZhtmpX84wj6MoJYLs8kwALw2Hm53wzbrPamoU-z3qvCKs2X3zPNYKMSJEvPDLUHzbvTfLcg=s176-c-k-c0x00ffffff-no-rj-mo', viewstime: '48K · 11 years ago', flex: 3 },
+        { title: 'Rick Astley - Never Gonna Give You Up', src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZPJD9RKB1nYJ7ME9tOoSz0wX7WvX9Xi_BXQ&usqp=CAU', author: 'Rick Astley', avatar: 'https://yt3.ggpht.com/Si7ZhtmpX84wj6MoJYLs8kwALw2Hm53wzbrPamoU-z3qvCKs2X3zPNYKMSJEvPDLUHzbvTfLcg=s176-c-k-c0x00ffffff-no-rj-mo', viewstime: '48K · 11 years ago', flex: 3 },
+        { title: 'Rick Astley - Never Gonna Give You Up', src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZPJD9RKB1nYJ7ME9tOoSz0wX7WvX9Xi_BXQ&usqp=CAU', author: 'Rick Astley', avatar: 'https://yt3.ggpht.com/Si7ZhtmpX84wj6MoJYLs8kwALw2Hm53wzbrPamoU-z3qvCKs2X3zPNYKMSJEvPDLUHzbvTfLcg=s176-c-k-c0x00ffffff-no-rj-mo', viewstime: '48K · 11 years ago', flex: 3 },
+        { title: 'Rick Astley - Never Gonna Give You Up', src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZPJD9RKB1nYJ7ME9tOoSz0wX7WvX9Xi_BXQ&usqp=CAU', author: 'Rick Astley', avatar: 'https://yt3.ggpht.com/Si7ZhtmpX84wj6MoJYLs8kwALw2Hm53wzbrPamoU-z3qvCKs2X3zPNYKMSJEvPDLUHzbvTfLcg=s176-c-k-c0x00ffffff-no-rj-mo', viewstime: '48K · 11 years ago', flex: 3 },
+        { title: 'Rick Astley - Never Gonna Give You Up', src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZPJD9RKB1nYJ7ME9tOoSz0wX7WvX9Xi_BXQ&usqp=CAU', author: 'Rick Astley', avatar: 'https://yt3.ggpht.com/Si7ZhtmpX84wj6MoJYLs8kwALw2Hm53wzbrPamoU-z3qvCKs2X3zPNYKMSJEvPDLUHzbvTfLcg=s176-c-k-c0x00ffffff-no-rj-mo', viewstime: '48K · 11 years ago', flex: 3 },
+        { title: 'Rick Astley - Never Gonna Give You Up', src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZPJD9RKB1nYJ7ME9tOoSz0wX7WvX9Xi_BXQ&usqp=CAU', author: 'Rick Astley', avatar: 'https://yt3.ggpht.com/Si7ZhtmpX84wj6MoJYLs8kwALw2Hm53wzbrPamoU-z3qvCKs2X3zPNYKMSJEvPDLUHzbvTfLcg=s176-c-k-c0x00ffffff-no-rj-mo', viewstime: '48K · 11 years ago', flex: 3 },
+        { title: 'Rick Astley - Never Gonna Give You Up', src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZPJD9RKB1nYJ7ME9tOoSz0wX7WvX9Xi_BXQ&usqp=CAU', author: 'Rick Astley', avatar: 'https://yt3.ggpht.com/Si7ZhtmpX84wj6MoJYLs8kwALw2Hm53wzbrPamoU-z3qvCKs2X3zPNYKMSJEvPDLUHzbvTfLcg=s176-c-k-c0x00ffffff-no-rj-mo', viewstime: '48K · 11 years ago', flex: 3 },
+        { title: 'Rick Astley - Never Gonna Give You Up', src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZPJD9RKB1nYJ7ME9tOoSz0wX7WvX9Xi_BXQ&usqp=CAU', author: 'Rick Astley', avatar: 'https://yt3.ggpht.com/Si7ZhtmpX84wj6MoJYLs8kwALw2Hm53wzbrPamoU-z3qvCKs2X3zPNYKMSJEvPDLUHzbvTfLcg=s176-c-k-c0x00ffffff-no-rj-mo', viewstime: '48K · 11 years ago', flex: 3 },
+        { title: 'Rick Astley - Never Gonna Give You Up', src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZPJD9RKB1nYJ7ME9tOoSz0wX7WvX9Xi_BXQ&usqp=CAU', author: 'Rick Astley', avatar: 'https://yt3.ggpht.com/Si7ZhtmpX84wj6MoJYLs8kwALw2Hm53wzbrPamoU-z3qvCKs2X3zPNYKMSJEvPDLUHzbvTfLcg=s176-c-k-c0x00ffffff-no-rj-mo', viewstime: '48K · 11 years ago', flex: 3 },
+        { title: 'Rick Astley - Never Gonna Give You Up', src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZPJD9RKB1nYJ7ME9tOoSz0wX7WvX9Xi_BXQ&usqp=CAU', author: 'Rick Astley', avatar: 'https://yt3.ggpht.com/Si7ZhtmpX84wj6MoJYLs8kwALw2Hm53wzbrPamoU-z3qvCKs2X3zPNYKMSJEvPDLUHzbvTfLcg=s176-c-k-c0x00ffffff-no-rj-mo', viewstime: '48K · 11 years ago', flex: 3 },
+        { title: 'Rick Astley - Never Gonna Give You Up', src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZPJD9RKB1nYJ7ME9tOoSz0wX7WvX9Xi_BXQ&usqp=CAU', author: 'Rick Astley', avatar: 'https://yt3.ggpht.com/Si7ZhtmpX84wj6MoJYLs8kwALw2Hm53wzbrPamoU-z3qvCKs2X3zPNYKMSJEvPDLUHzbvTfLcg=s176-c-k-c0x00ffffff-no-rj-mo', viewstime: '48K · 11 years ago', flex: 3 },
+        { title: 'Rick Astley - Never Gonna Give You Up', src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZPJD9RKB1nYJ7ME9tOoSz0wX7WvX9Xi_BXQ&usqp=CAU', author: 'Rick Astley', avatar: 'https://yt3.ggpht.com/Si7ZhtmpX84wj6MoJYLs8kwALw2Hm53wzbrPamoU-z3qvCKs2X3zPNYKMSJEvPDLUHzbvTfLcg=s176-c-k-c0x00ffffff-no-rj-mo', viewstime: '48K · 11 years ago', flex: 3 },
+        
+
+      ],
       }
     },
   }
@@ -293,7 +333,7 @@
   font-size:0.9rem !important;
   font-family: sans-serif;
   border-left: 15px !important;;
-  padding-left: 15px;
+  padding-left: 10px;
 }
 
 #info {
@@ -312,4 +352,3 @@
 
 
 </style>
-
