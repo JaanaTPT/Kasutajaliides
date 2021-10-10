@@ -162,7 +162,6 @@
             placeholder="Search"
             dense
             append-icon="mdi-magnify"
-            light
             solo
             outlined
           ></v-text-field>
@@ -214,9 +213,7 @@
             </v-img>
             </a>
             <v-card-text>
-
-     <v-card-text v-text="card.title"></v-card-text>
-
+     <v-card-text v-text="card.title" style = "text-decoration: none"></v-card-text>
       <!-- <v-avatar>
               <v-img  :src= card.avatar>
                
@@ -305,18 +302,18 @@
           { tab: 'Tab X Content', content: 'Tab X Content' },
         ],
         cards: [
-        { title: 'Rick Astley - Never Gonna Give You Up', src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZPJD9RKB1nYJ7ME9tOoSz0wX7WvX9Xi_BXQ&usqp=CAU', author: 'Rick Astley', avatar: 'https://yt3.ggpht.com/Si7ZhtmpX84wj6MoJYLs8kwALw2Hm53wzbrPamoU-z3qvCKs2X3zPNYKMSJEvPDLUHzbvTfLcg=s176-c-k-c0x00ffffff-no-rj-mo', viewstime: '48K · 11 years ago', flex: 3 },
-        { title: 'Rick Astley - Never Gonna Give You Up', src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZPJD9RKB1nYJ7ME9tOoSz0wX7WvX9Xi_BXQ&usqp=CAU', author: 'Rick Astley', avatar: 'https://yt3.ggpht.com/Si7ZhtmpX84wj6MoJYLs8kwALw2Hm53wzbrPamoU-z3qvCKs2X3zPNYKMSJEvPDLUHzbvTfLcg=s176-c-k-c0x00ffffff-no-rj-mo', viewstime: '48K · 11 years ago', flex: 3 },
-        { title: 'Rick Astley - Never Gonna Give You Up', src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZPJD9RKB1nYJ7ME9tOoSz0wX7WvX9Xi_BXQ&usqp=CAU', author: 'Rick Astley', avatar: 'https://yt3.ggpht.com/Si7ZhtmpX84wj6MoJYLs8kwALw2Hm53wzbrPamoU-z3qvCKs2X3zPNYKMSJEvPDLUHzbvTfLcg=s176-c-k-c0x00ffffff-no-rj-mo', viewstime: '48K · 11 years ago', flex: 3 },
-        { title: 'Rick Astley - Never Gonna Give You Up', src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZPJD9RKB1nYJ7ME9tOoSz0wX7WvX9Xi_BXQ&usqp=CAU', author: 'Rick Astley', avatar: 'https://yt3.ggpht.com/Si7ZhtmpX84wj6MoJYLs8kwALw2Hm53wzbrPamoU-z3qvCKs2X3zPNYKMSJEvPDLUHzbvTfLcg=s176-c-k-c0x00ffffff-no-rj-mo', viewstime: '48K · 11 years ago', flex: 3 },
-        { title: 'Rick Astley - Never Gonna Give You Up', src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZPJD9RKB1nYJ7ME9tOoSz0wX7WvX9Xi_BXQ&usqp=CAU', author: 'Rick Astley', avatar: 'https://yt3.ggpht.com/Si7ZhtmpX84wj6MoJYLs8kwALw2Hm53wzbrPamoU-z3qvCKs2X3zPNYKMSJEvPDLUHzbvTfLcg=s176-c-k-c0x00ffffff-no-rj-mo', viewstime: '48K · 11 years ago', flex: 3 },
-        { title: 'Rick Astley - Never Gonna Give You Up', src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZPJD9RKB1nYJ7ME9tOoSz0wX7WvX9Xi_BXQ&usqp=CAU', author: 'Rick Astley', avatar: 'https://yt3.ggpht.com/Si7ZhtmpX84wj6MoJYLs8kwALw2Hm53wzbrPamoU-z3qvCKs2X3zPNYKMSJEvPDLUHzbvTfLcg=s176-c-k-c0x00ffffff-no-rj-mo', viewstime: '48K · 11 years ago', flex: 3 },
-        { title: 'Rick Astley - Never Gonna Give You Up', src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZPJD9RKB1nYJ7ME9tOoSz0wX7WvX9Xi_BXQ&usqp=CAU', author: 'Rick Astley', avatar: 'https://yt3.ggpht.com/Si7ZhtmpX84wj6MoJYLs8kwALw2Hm53wzbrPamoU-z3qvCKs2X3zPNYKMSJEvPDLUHzbvTfLcg=s176-c-k-c0x00ffffff-no-rj-mo', viewstime: '48K · 11 years ago', flex: 3 },
-        { title: 'Rick Astley - Never Gonna Give You Up', src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZPJD9RKB1nYJ7ME9tOoSz0wX7WvX9Xi_BXQ&usqp=CAU', author: 'Rick Astley', avatar: 'https://yt3.ggpht.com/Si7ZhtmpX84wj6MoJYLs8kwALw2Hm53wzbrPamoU-z3qvCKs2X3zPNYKMSJEvPDLUHzbvTfLcg=s176-c-k-c0x00ffffff-no-rj-mo', viewstime: '48K · 11 years ago', flex: 3 },
-        { title: 'Rick Astley - Never Gonna Give You Up', src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZPJD9RKB1nYJ7ME9tOoSz0wX7WvX9Xi_BXQ&usqp=CAU', author: 'Rick Astley', avatar: 'https://yt3.ggpht.com/Si7ZhtmpX84wj6MoJYLs8kwALw2Hm53wzbrPamoU-z3qvCKs2X3zPNYKMSJEvPDLUHzbvTfLcg=s176-c-k-c0x00ffffff-no-rj-mo', viewstime: '48K · 11 years ago', flex: 3 },
-        { title: 'Rick Astley - Never Gonna Give You Up', src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZPJD9RKB1nYJ7ME9tOoSz0wX7WvX9Xi_BXQ&usqp=CAU', author: 'Rick Astley', avatar: 'https://yt3.ggpht.com/Si7ZhtmpX84wj6MoJYLs8kwALw2Hm53wzbrPamoU-z3qvCKs2X3zPNYKMSJEvPDLUHzbvTfLcg=s176-c-k-c0x00ffffff-no-rj-mo', viewstime: '48K · 11 years ago', flex: 3 },
-        { title: 'Rick Astley - Never Gonna Give You Up', src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZPJD9RKB1nYJ7ME9tOoSz0wX7WvX9Xi_BXQ&usqp=CAU', author: 'Rick Astley', avatar: 'https://yt3.ggpht.com/Si7ZhtmpX84wj6MoJYLs8kwALw2Hm53wzbrPamoU-z3qvCKs2X3zPNYKMSJEvPDLUHzbvTfLcg=s176-c-k-c0x00ffffff-no-rj-mo', viewstime: '48K · 11 years ago', flex: 3 },
-        { title: 'Rick Astley - Never Gonna Give You Up', src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZPJD9RKB1nYJ7ME9tOoSz0wX7WvX9Xi_BXQ&usqp=CAU', author: 'Rick Astley', avatar: 'https://yt3.ggpht.com/Si7ZhtmpX84wj6MoJYLs8kwALw2Hm53wzbrPamoU-z3qvCKs2X3zPNYKMSJEvPDLUHzbvTfLcg=s176-c-k-c0x00ffffff-no-rj-mo', viewstime: '48K · 11 years ago', flex: 3 },
+        { title: 'Rick Astley - Never Gonna Give You Up', src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZPJD9RKB1nYJ7ME9tOoSz0wX7WvX9Xi_BXQ&usqp=CAU', author: 'Rick Astley', avatar: 'https://yt3.ggpht.com/Si7ZhtmpX84wj6MoJYLs8kwALw2Hm53wzbrPamoU-z3qvCKs2X3zPNYKMSJEvPDLUHzbvTfLcg=s176-c-k-c0x00ffffff-no-rj-mo', viewstime: '1B · 11 years ago', flex: 3 },
+        { title: 'Rick Astley - Never Gonna Give You Up', src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZPJD9RKB1nYJ7ME9tOoSz0wX7WvX9Xi_BXQ&usqp=CAU', author: 'Rick Astley', avatar: 'https://yt3.ggpht.com/Si7ZhtmpX84wj6MoJYLs8kwALw2Hm53wzbrPamoU-z3qvCKs2X3zPNYKMSJEvPDLUHzbvTfLcg=s176-c-k-c0x00ffffff-no-rj-mo', viewstime: '1B · 11 years ago', flex: 3 },
+        { title: 'Rick Astley - Never Gonna Give You Up', src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZPJD9RKB1nYJ7ME9tOoSz0wX7WvX9Xi_BXQ&usqp=CAU', author: 'Rick Astley', avatar: 'https://yt3.ggpht.com/Si7ZhtmpX84wj6MoJYLs8kwALw2Hm53wzbrPamoU-z3qvCKs2X3zPNYKMSJEvPDLUHzbvTfLcg=s176-c-k-c0x00ffffff-no-rj-mo', viewstime: '1B · 11 years ago', flex: 3 },
+        { title: 'Rick Astley - Never Gonna Give You Up', src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZPJD9RKB1nYJ7ME9tOoSz0wX7WvX9Xi_BXQ&usqp=CAU', author: 'Rick Astley', avatar: 'https://yt3.ggpht.com/Si7ZhtmpX84wj6MoJYLs8kwALw2Hm53wzbrPamoU-z3qvCKs2X3zPNYKMSJEvPDLUHzbvTfLcg=s176-c-k-c0x00ffffff-no-rj-mo', viewstime: '1B · 11 years ago', flex: 3 },
+        { title: 'Rick Astley - Never Gonna Give You Up', src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZPJD9RKB1nYJ7ME9tOoSz0wX7WvX9Xi_BXQ&usqp=CAU', author: 'Rick Astley', avatar: 'https://yt3.ggpht.com/Si7ZhtmpX84wj6MoJYLs8kwALw2Hm53wzbrPamoU-z3qvCKs2X3zPNYKMSJEvPDLUHzbvTfLcg=s176-c-k-c0x00ffffff-no-rj-mo', viewstime: '1B · 11 years ago', flex: 3 },
+        { title: 'Rick Astley - Never Gonna Give You Up', src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZPJD9RKB1nYJ7ME9tOoSz0wX7WvX9Xi_BXQ&usqp=CAU', author: 'Rick Astley', avatar: 'https://yt3.ggpht.com/Si7ZhtmpX84wj6MoJYLs8kwALw2Hm53wzbrPamoU-z3qvCKs2X3zPNYKMSJEvPDLUHzbvTfLcg=s176-c-k-c0x00ffffff-no-rj-mo', viewstime: '1B · 11 years ago', flex: 3 },
+        { title: 'Rick Astley - Never Gonna Give You Up', src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZPJD9RKB1nYJ7ME9tOoSz0wX7WvX9Xi_BXQ&usqp=CAU', author: 'Rick Astley', avatar: 'https://yt3.ggpht.com/Si7ZhtmpX84wj6MoJYLs8kwALw2Hm53wzbrPamoU-z3qvCKs2X3zPNYKMSJEvPDLUHzbvTfLcg=s176-c-k-c0x00ffffff-no-rj-mo', viewstime: '1B · 11 years ago', flex: 3 },
+        { title: 'Rick Astley - Never Gonna Give You Up', src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZPJD9RKB1nYJ7ME9tOoSz0wX7WvX9Xi_BXQ&usqp=CAU', author: 'Rick Astley', avatar: 'https://yt3.ggpht.com/Si7ZhtmpX84wj6MoJYLs8kwALw2Hm53wzbrPamoU-z3qvCKs2X3zPNYKMSJEvPDLUHzbvTfLcg=s176-c-k-c0x00ffffff-no-rj-mo', viewstime: '1B · 11 years ago', flex: 3 },
+        { title: 'Rick Astley - Never Gonna Give You Up', src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZPJD9RKB1nYJ7ME9tOoSz0wX7WvX9Xi_BXQ&usqp=CAU', author: 'Rick Astley', avatar: 'https://yt3.ggpht.com/Si7ZhtmpX84wj6MoJYLs8kwALw2Hm53wzbrPamoU-z3qvCKs2X3zPNYKMSJEvPDLUHzbvTfLcg=s176-c-k-c0x00ffffff-no-rj-mo', viewstime: '1B · 11 years ago', flex: 3 },
+        { title: 'Rick Astley - Never Gonna Give You Up', src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZPJD9RKB1nYJ7ME9tOoSz0wX7WvX9Xi_BXQ&usqp=CAU', author: 'Rick Astley', avatar: 'https://yt3.ggpht.com/Si7ZhtmpX84wj6MoJYLs8kwALw2Hm53wzbrPamoU-z3qvCKs2X3zPNYKMSJEvPDLUHzbvTfLcg=s176-c-k-c0x00ffffff-no-rj-mo', viewstime: '1B · 11 years ago', flex: 3 },
+        { title: 'Rick Astley - Never Gonna Give You Up', src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZPJD9RKB1nYJ7ME9tOoSz0wX7WvX9Xi_BXQ&usqp=CAU', author: 'Rick Astley', avatar: 'https://yt3.ggpht.com/Si7ZhtmpX84wj6MoJYLs8kwALw2Hm53wzbrPamoU-z3qvCKs2X3zPNYKMSJEvPDLUHzbvTfLcg=s176-c-k-c0x00ffffff-no-rj-mo', viewstime: '1B · 11 years ago', flex: 3 },
+        { title: 'Rick Astley - Never Gonna Give You Up', src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZPJD9RKB1nYJ7ME9tOoSz0wX7WvX9Xi_BXQ&usqp=CAU', author: 'Rick Astley', avatar: 'https://yt3.ggpht.com/Si7ZhtmpX84wj6MoJYLs8kwALw2Hm53wzbrPamoU-z3qvCKs2X3zPNYKMSJEvPDLUHzbvTfLcg=s176-c-k-c0x00ffffff-no-rj-mo', viewstime: '1B · 11 years ago', flex: 3 },
         
 
       ],
@@ -348,6 +345,7 @@
 
 .v-text-field {
   max-width: 500px !important;
+  
 }
 
 
