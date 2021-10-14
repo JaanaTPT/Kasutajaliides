@@ -3,22 +3,22 @@
 <v-app>
   <v-card class="mx-auto">
   <v-navigation-drawer
-      app
+      v-model="drawer"
+      :mini-variant.sync="mini"
       permanent
       left
-      fixed>
+      app>
+
    <template>
         <v-list-item>
-          <v-app-bar-nav-icon></v-app-bar-nav-icon>
+          <v-app-bar-nav-icon icon
+          @click.stop="mini = !mini"></v-app-bar-nav-icon>
             <img src="https://www.pngarts.com/files/9/official-YouTube-Logo-PNG-High-Quality-Image.png" style = "max-width: 50%;">
         </v-list-item>
       </template>
 
 
       <v-list dense>
-         
-        
-      
         <v-list-item
           v-for="item in items"
           :key="item.title"
@@ -33,8 +33,7 @@
           <v-list-item-content>
             <v-list-item-title>{{ item.title }}</v-list-item-title>
           </v-list-item-content>
-        </v-list-item>
-       
+        </v-list-item>       
       </v-list>
 
            <v-divider></v-divider>
@@ -246,6 +245,7 @@
     theme: { disable:true },
     data () {
       return {
+         mini: false,
         items: [
           { title: 'Home', icon: 'mdi-home-variant' },
           { title: 'Explore', icon: 'mdi-compass' },
