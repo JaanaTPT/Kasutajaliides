@@ -7,7 +7,8 @@
       :mini-variant.sync="mini"
       permanent
       left
-      app>
+      app
+      style = "min-width: 6%;">
 
    <template>
         <v-list-item>
